@@ -1,4 +1,19 @@
 body{
 color: black;
-background-color: lightgrey;
+background-color: lightblue;
+}
+a.username {
+    color: #00aced
+}
+
+a.tag {
+    color: #0084b4
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), url(https://i.pinimg.com/videos/thumbnails/originals/c0/d6/be/c0d6bef….0000001.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    transition: background-image 500ms linear 0s;
 }
