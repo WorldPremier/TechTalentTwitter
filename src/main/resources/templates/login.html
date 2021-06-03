@@ -13,7 +13,7 @@
 <body>
 <div class="container">
     <div th:replace="fragments/navbar"></div>
-    <h2>Welcome!</h2>
+    <h2 style="color:red">Welcome!</h2>
     <form th:action="@{/login}" method="post"><br/>
         <input type="text" id="username" name="username" th:placeholder="Username" class="form-control"/> <br/>
         <input type="password" th:placeholder="Password" id="password" name="password" class="form-control"/> <br/>
@@ -23,4 +23,12 @@
         <button class="btn btn-md btn-success btn-block" name="Submit" value="Login" type="Submit">Log in</button>
     </form>
 </div>
+<video poster="screenshot.jpg" autoplay playsinline muted loop>
+    <source src="https://file-examples-com.github.io/uploads/2020/03/file_example_WEBM_1280_3_6MB.webm" type="video/webm">
+    <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4" type="video/mp4">
+</video>
+<Style>
+    h1{color: red};
+</Style>
+<h1>Hello Franklyn Reyes<br /><a href="https://www.michaelburrows.xyz/fullscreen-video-background/">Tweeting Around The World</a></h1>
 </body>
