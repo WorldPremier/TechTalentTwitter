@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
 <head>
-    <title>Log in</title>
+    <title>Log in </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="/custom.css">
@@ -10,8 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/custom.js"></script>
 </head>
-<body>
-<div class="container">
+<body style="/images/skyViews">
+<div class="container" >
     <div th:replace="fragments/navbar"></div>
     <ul class="nav nav-tabs">
         <li role="presentation" th:classappend="${filter == 'all' ? 'active' : '' }">
@@ -25,8 +25,11 @@
         <h5>@<span th:text="${tweet.user.username}"></span>
             <small><span th:text="${tweet.date}"></span></small></h5>
         <p th:utext="${tweet.message}"></p>
-    </div>
+    <form th:action="@{~/tweets/{Id}}" method="post">
+        <button class="btn btn-md btn-primary twitter-btn m-3" type="Submit" >Delete</button>
+    </form>
 </div>
+    </div>
 <div th:if="${#lists.isEmpty(tweetList) and filter == 'all'}">
     <h3>No tweets have been created yet</h3>
 </div>

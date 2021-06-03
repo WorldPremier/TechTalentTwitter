@@ -13,7 +13,7 @@
 <div class="container">
     <div th:replace="fragments/navbar"></div>
 </div>
-<div class="container">
+<div class="container" style="">
     <h2>Sign up</h2>
     <form th:unless="${success}" th:action="@{/signup}" th:object="${user}" method="post" autocomplete="off" >
         <div class="form-group">
